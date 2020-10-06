@@ -60,8 +60,6 @@ MergeSort(std::vector<std::string> &vec)
 #include <string>
 #include "hw5.h"
 
-using namespace std;
-
 void BubbleSort(std::vector<std::string> &vec)  {
   std::string temp;
   for (int i = 0; i < vec.size()-1; i++)  {
@@ -95,14 +93,14 @@ void InsertionSort(std::vector<int>& v)  {
   InsertionSortHelper(v, v.size());
 }
 
-static void MergeVec(vector<string>&vec, int a, int b, int c)  {
+static void MergeVec(std::vector<std::string>&vec, int a, int b, int c)  {
   int size1 = b-a+1;
   int size2 = c-b;
   int i=0;
   int j=0;
   int k;
-  vector<string> left(size1);
-  vector<string> right(size2);
+  std::vector<std::string> left(size1);
+  std::vector<std::string> right(size2);
 
   for(int i = 0; i < size1; i++)  {
     left[i] = vec[a+i];
@@ -132,7 +130,7 @@ static void MergeVec(vector<string>&vec, int a, int b, int c)  {
     k++;
   }
 }
-static void MergeSortHelper(vector<string>&vec, int l, int r)  {
+static void MergeSortHelper(std::vector<std::string>&vec, int l, int r)  {
   if (l < r)  { 
     int m = l + (r - l) / 2; 
     MergeSortHelper(vec, l, m); 

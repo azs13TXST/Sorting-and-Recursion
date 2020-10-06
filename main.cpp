@@ -46,25 +46,32 @@ void print3(std::vector<std::string> &h) {
 
 int main() {
   std::vector<std::string> v;
-
   v = {"emma", "dora", "ruth", "ziegellaub", "eichler"};
+
   std::cout << "Case 1: ";
+
   MergeSort(v);
   print(v);
+
   std::cout << "Expected: [dora, eichler, emma, ruth, ziegellaub]" << std::endl << std::endl;
 
   std::vector<int> t;
   t = {11, 3, 420, 97, 69, 22};
+
   std::cout << "Case 2: ";
+
   InsertionSort(t);
   print2(t);
+
   std::cout << "Expected: [3, 11, 22, 69, 97, 420]" << std::endl << std::endl;
 
   std::vector<std::string> h;
-
   h = {"ana", "mercy", "baptiste", "moira", "zenyatta", "brigitte"};
+
   std::cout << "Case 3: ";
+
   BubbleSort(h);
   print3(h);
+  
   std::cout << "Expected: [ana, baptiste, brigitte, mercy, moira, zenyatta]"  << std::endl << std::endl;
 }
